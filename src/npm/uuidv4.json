@@ -1,0 +1,768 @@
+{
+  "_id": "uuidv4",
+  "_rev": "32-de67960a575a09f01d1c105f4cca8a3f",
+  "name": "uuidv4",
+  "description": "uuid creates UUIDs.",
+  "dist-tags": { "latest": "5.0.1" },
+  "versions": {
+    "0.3.0": {
+      "name": "uuidv4",
+      "version": "0.3.0",
+      "description": "uuid creates UUIDs.",
+      "contributors": [
+        { "name": "Golo Roden", "email": "golo.roden@thenativeweb.io" },
+        {
+          "name": "Matthias Wagler",
+          "email": "matthias.wagler@thenativeweb.io"
+        }
+      ],
+      "main": "lib/uuidv4.js",
+      "dependencies": {},
+      "devDependencies": {
+        "grunt": "0.4.5",
+        "node-assertthat": "0.2.1",
+        "tourism": "0.7.3"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/thenativeweb/uuidv4.git"
+      },
+      "license": "MIT",
+      "gitHead": "a7a8042bf88c02bc32e0c19bb8febef1ee3f111f",
+      "bugs": { "url": "https://github.com/thenativeweb/uuidv4/issues" },
+      "homepage": "https://github.com/thenativeweb/uuidv4",
+      "_id": "uuidv4@0.3.0",
+      "scripts": {},
+      "_shasum": "a81a2c9f96993ac8b15f71d5be81c70e04a0d365",
+      "_from": ".",
+      "_npmVersion": "1.4.28",
+      "_npmUser": { "name": "thenativeweb", "email": "hello@thenativeweb.io" },
+      "maintainers": [
+        { "name": "thenativeweb", "email": "hello@thenativeweb.io" }
+      ],
+      "dist": {
+        "shasum": "a81a2c9f96993ac8b15f71d5be81c70e04a0d365",
+        "tarball": "https://registry.npmjs.org/uuidv4/-/uuidv4-0.3.0.tgz"
+      },
+      "directories": {}
+    },
+    "0.3.1": {
+      "name": "uuidv4",
+      "version": "0.3.1",
+      "description": "uuid creates UUIDs.",
+      "contributors": [
+        { "name": "Golo Roden", "email": "golo.roden@thenativeweb.io" },
+        {
+          "name": "Matthias Wagler",
+          "email": "matthias.wagler@thenativeweb.io"
+        }
+      ],
+      "main": "lib/uuidv4.js",
+      "dependencies": {},
+      "devDependencies": {
+        "assertthat": "0.4.2",
+        "grunt": "0.4.5",
+        "tourism": "0.13.2"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/thenativeweb/uuidv4.git"
+      },
+      "license": "MIT",
+      "gitHead": "7950c4704e71ab31d48260f28a1326e8dbf2b8c9",
+      "bugs": { "url": "https://github.com/thenativeweb/uuidv4/issues" },
+      "homepage": "https://github.com/thenativeweb/uuidv4",
+      "_id": "uuidv4@0.3.1",
+      "scripts": {},
+      "_shasum": "63d11c73d5c8c8643112bdbba6cd81ba26ac93f4",
+      "_from": ".",
+      "_npmVersion": "2.5.1",
+      "_nodeVersion": "1.2.0",
+      "_npmUser": { "name": "thenativeweb", "email": "hello@thenativeweb.io" },
+      "maintainers": [
+        { "name": "thenativeweb", "email": "hello@thenativeweb.io" }
+      ],
+      "dist": {
+        "shasum": "63d11c73d5c8c8643112bdbba6cd81ba26ac93f4",
+        "tarball": "https://registry.npmjs.org/uuidv4/-/uuidv4-0.3.1.tgz"
+      },
+      "directories": {}
+    },
+    "0.4.0": {
+      "name": "uuidv4",
+      "version": "0.4.0",
+      "description": "uuid creates UUIDs.",
+      "contributors": [
+        { "name": "Golo Roden", "email": "golo.roden@thenativeweb.io" },
+        {
+          "name": "Matthias Wagler",
+          "email": "matthias.wagler@thenativeweb.io"
+        }
+      ],
+      "main": "lib/uuidv4.js",
+      "dependencies": { "sha-1": "0.1.1" },
+      "devDependencies": {
+        "assertthat": "0.8.0",
+        "roboter": "0.13.5",
+        "roboter-server": "0.13.5"
+      },
+      "browserify": { "transform": [["babelify", { "presets": ["es2015"] }]] },
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/thenativeweb/uuidv4.git"
+      },
+      "keywords": ["guid", "uuid"],
+      "license": "MIT",
+      "gitHead": "d618877f9b0be8aa1b7cc975abb24d324242d1f0",
+      "bugs": { "url": "https://github.com/thenativeweb/uuidv4/issues" },
+      "homepage": "https://github.com/thenativeweb/uuidv4#readme",
+      "_id": "uuidv4@0.4.0",
+      "scripts": {},
+      "_shasum": "570406b066c8f77e43ec04588e86d7a5bfe7c08d",
+      "_from": ".",
+      "_npmVersion": "3.10.8",
+      "_nodeVersion": "6.9.1",
+      "_npmUser": { "name": "goloroden", "email": "webmaster@goloroden.de" },
+      "dist": {
+        "shasum": "570406b066c8f77e43ec04588e86d7a5bfe7c08d",
+        "tarball": "https://registry.npmjs.org/uuidv4/-/uuidv4-0.4.0.tgz"
+      },
+      "maintainers": [
+        { "name": "drlogout", "email": "hello@noltech.net" },
+        { "name": "goloroden", "email": "webmaster@goloroden.de" },
+        { "name": "mattwagl", "email": "wagler@intuity.de" },
+        { "name": "thenativeweb-admin", "email": "hello@thenativeweb.io" }
+      ],
+      "_npmOperationalInternal": {
+        "host": "packages-18-east.internal.npmjs.com",
+        "tmp": "tmp/uuidv4-0.4.0.tgz_1478842313678_0.8264244007878006"
+      },
+      "directories": {}
+    },
+    "0.4.1": {
+      "name": "uuidv4",
+      "version": "0.4.1",
+      "description": "uuid creates UUIDs.",
+      "contributors": [
+        { "name": "Golo Roden", "email": "golo.roden@thenativeweb.io" },
+        {
+          "name": "Matthias Wagler",
+          "email": "matthias.wagler@thenativeweb.io"
+        }
+      ],
+      "main": "dist/uuidv4.js",
+      "dependencies": { "sha-1": "0.1.1" },
+      "devDependencies": {
+        "assertthat": "0.8.3",
+        "roboter": "0.14.6",
+        "roboter-server": "0.14.6"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/thenativeweb/uuidv4.git"
+      },
+      "keywords": ["guid", "uuid"],
+      "license": "MIT",
+      "gitHead": "f9579508d8e4a7c0487bdc153ca196eaf2a00d2d",
+      "bugs": { "url": "https://github.com/thenativeweb/uuidv4/issues" },
+      "homepage": "https://github.com/thenativeweb/uuidv4#readme",
+      "_id": "uuidv4@0.4.1",
+      "scripts": {},
+      "_shasum": "03d7cbdbf2285b90ededfc3419d1518f57215127",
+      "_from": ".",
+      "_npmVersion": "3.10.10",
+      "_nodeVersion": "6.9.5",
+      "_npmUser": { "name": "goloroden", "email": "webmaster@goloroden.de" },
+      "dist": {
+        "shasum": "03d7cbdbf2285b90ededfc3419d1518f57215127",
+        "tarball": "https://registry.npmjs.org/uuidv4/-/uuidv4-0.4.1.tgz"
+      },
+      "maintainers": [
+        { "name": "drlogout", "email": "hello@noltech.net" },
+        { "name": "goloroden", "email": "webmaster@goloroden.de" },
+        { "name": "mattwagl", "email": "wagler@intuity.de" },
+        { "name": "thenativeweb-admin", "email": "hello@thenativeweb.io" }
+      ],
+      "_npmOperationalInternal": {
+        "host": "packages-18-east.internal.npmjs.com",
+        "tmp": "tmp/uuidv4-0.4.1.tgz_1487843609992_0.508011506870389"
+      },
+      "directories": {}
+    },
+    "0.5.0": {
+      "name": "uuidv4",
+      "version": "0.5.0",
+      "description": "uuid creates UUIDs.",
+      "contributors": [
+        { "name": "Golo Roden", "email": "golo.roden@thenativeweb.io" },
+        {
+          "name": "Matthias Wagler",
+          "email": "matthias.wagler@thenativeweb.io"
+        }
+      ],
+      "main": "dist/uuidv4.js",
+      "dependencies": { "sha-1": "0.1.1" },
+      "devDependencies": {
+        "assertthat": "0.8.5",
+        "roboter": "0.15.1",
+        "roboter-server": "0.15.1"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/thenativeweb/uuidv4.git"
+      },
+      "keywords": ["guid", "uuid"],
+      "license": "MIT",
+      "gitHead": "c3bff7c761dd82f5d261898fce842aac4d3f431d",
+      "bugs": { "url": "https://github.com/thenativeweb/uuidv4/issues" },
+      "homepage": "https://github.com/thenativeweb/uuidv4#readme",
+      "_id": "uuidv4@0.5.0",
+      "scripts": {},
+      "_shasum": "a537b6ea7f0556c36ad35988095c7d5da6ab53ba",
+      "_from": ".",
+      "_npmVersion": "3.10.10",
+      "_nodeVersion": "6.10.0",
+      "_npmUser": { "name": "goloroden", "email": "webmaster@goloroden.de" },
+      "dist": {
+        "shasum": "a537b6ea7f0556c36ad35988095c7d5da6ab53ba",
+        "tarball": "https://registry.npmjs.org/uuidv4/-/uuidv4-0.5.0.tgz"
+      },
+      "maintainers": [
+        { "name": "drlogout", "email": "hello@noltech.net" },
+        { "name": "goloroden", "email": "webmaster@goloroden.de" },
+        { "name": "mattwagl", "email": "wagler@intuity.de" },
+        { "name": "thenativeweb-admin", "email": "hello@thenativeweb.io" }
+      ],
+      "_npmOperationalInternal": {
+        "host": "packages-12-west.internal.npmjs.com",
+        "tmp": "tmp/uuidv4-0.5.0.tgz_1491571830640_0.04055101447738707"
+      },
+      "directories": {}
+    },
+    "1.0.0": {
+      "name": "uuidv4",
+      "version": "1.0.0",
+      "description": "uuid creates UUIDs.",
+      "contributors": [
+        { "name": "Golo Roden", "email": "golo.roden@thenativeweb.io" },
+        {
+          "name": "Matthias Wagler",
+          "email": "matthias.wagler@thenativeweb.io"
+        },
+        {
+          "name": "Jan-Hendrik Grundhöfer",
+          "email": "jan-hendrik.grundhoefer@thenativeweb.io"
+        }
+      ],
+      "main": "dist/uuidv4.js",
+      "dependencies": { "sha-1": "0.1.1" },
+      "devDependencies": {
+        "assertthat": "1.0.0",
+        "roboter": "0.15.6",
+        "roboter-server": "0.15.6"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/thenativeweb/uuidv4.git"
+      },
+      "keywords": ["guid", "uuid"],
+      "license": "MIT",
+      "gitHead": "2455833ac56ee0fb5fb13a70deeaecf50f0e0d08",
+      "bugs": { "url": "https://github.com/thenativeweb/uuidv4/issues" },
+      "homepage": "https://github.com/thenativeweb/uuidv4#readme",
+      "_id": "uuidv4@1.0.0",
+      "_npmVersion": "5.6.0",
+      "_nodeVersion": "8.9.0",
+      "_npmUser": {
+        "name": "grundhoeferj",
+        "email": "jan-hendrik.grundhoefer@thenativeweb.io"
+      },
+      "dist": {
+        "integrity": "sha512-Y4CvBVF5TgqwNAYgsVq4Y1P2UybLpnUCq5IX0HfnBcmCLeS+DJdVnSt5mnz0dpf2by+Mp+HwiU4UTWUZHbgwLA==",
+        "shasum": "f30a2e10f65b2381fb9a577681337efb17eb484f",
+        "tarball": "https://registry.npmjs.org/uuidv4/-/uuidv4-1.0.0.tgz",
+        "fileCount": 7,
+        "unpackedSize": 9448
+      },
+      "maintainers": [
+        { "email": "webmaster@goloroden.de", "name": "goloroden" },
+        {
+          "email": "jan-hendrik.grundhoefer@thenativeweb.io",
+          "name": "grundhoeferj"
+        },
+        { "email": "wagler@intuity.de", "name": "mattwagl" },
+        { "email": "hello@thenativeweb.io", "name": "thenativeweb-admin" }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/uuidv4_1.0.0_1518107546297_0.2792819413956418"
+      },
+      "_hasShrinkwrap": false
+    },
+    "1.0.1": {
+      "name": "uuidv4",
+      "version": "1.0.1",
+      "description": "uuid creates UUIDs.",
+      "contributors": [
+        { "name": "Golo Roden", "email": "golo.roden@thenativeweb.io" },
+        {
+          "name": "Matthias Wagler",
+          "email": "matthias.wagler@thenativeweb.io"
+        },
+        {
+          "name": "Jan-Hendrik Grundhöfer",
+          "email": "jan-hendrik.grundhoefer@thenativeweb.io"
+        }
+      ],
+      "main": "dist/uuidv4.js",
+      "dependencies": { "sha-1": "0.1.1", "uuid": "3.2.1" },
+      "devDependencies": { "assertthat": "1.0.0", "roboter": "1.0.4" },
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/thenativeweb/uuidv4.git"
+      },
+      "keywords": ["guid", "uuid"],
+      "license": "MIT",
+      "gitHead": "c5432c2b11100e012fad2710c829640938c84ea5",
+      "bugs": { "url": "https://github.com/thenativeweb/uuidv4/issues" },
+      "homepage": "https://github.com/thenativeweb/uuidv4#readme",
+      "_id": "uuidv4@1.0.1",
+      "_npmVersion": "5.6.0",
+      "_nodeVersion": "8.11.2",
+      "_npmUser": { "name": "goloroden", "email": "webmaster@goloroden.de" },
+      "dist": {
+        "integrity": "sha512-Anb/VRbs8Xqvz3C4um6JmSVn+HQG4M7Opa6xqoMZFf0wL+AlDDHGRFvGtuspGctlkfOREzDEDjyPGjS7bcs89A==",
+        "shasum": "0a670756781674480a7c4d00df4a8d1963ea4745",
+        "tarball": "https://registry.npmjs.org/uuidv4/-/uuidv4-1.0.1.tgz",
+        "fileCount": 6,
+        "unpackedSize": 6927,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbHs4QCRA9TVsSAnZWagAAhzoP/jlnTimx5KbICpUGYatf\nEyNgIN9kcWG9QEOHChRoGuTyNhAo9yM8Q6QtsGYdbfo+hx8Ozw9HOQPQKXPX\ndsEjMNKbukWj+g07oY5xSHWjbEIj37/n9WfBS6q28mdI6UzpfT4E7CG9H4R9\nF25UXTTTdX0b8URBvY9hfox2IUO/1aR031ybqLm6gL10X3LEdYNnOSgcfofd\nMhSB0uhFlL3gZlHZok6Nrez6PBLYJ140AYqd9SeAnGJD7M8kKrVRyb4wX7E5\nhrCylEl3bnHvWsaszW5HwWU/jGwC1CSbaxk7LookgCzH/mKccbGy7J5pdgsg\n4kBX+uAuWKngJg2CpV88bjMEXn3fwUqnDBsHaaJzSOCzcI8sEmuqnDtruDkl\nRKWo66TjL52Ma0xe1upPWFPkR7ryqLoj2F2Aw+cfUni9VEM5JhJ5ctaUBkzU\n9Ls2OcQx2YZ0BOEEMKKWDTogRrSg79t5kwk+1WI/pJz2lWkOa1TwCzmqDhbx\n/AiAOESIcUPXIYtW+1xPcF0LsU85Pp0KTR8qXvX3s899rniCR+NU7g/jDW/K\nriHkMdCkMIqIAryxzAXnnarOIk1J3awmXfpJ4VsXt2WT1h1vEvbSIhbzLUh5\nd6KrVIduhGIxSntBjiftsS+TsUHiDRjo/w/D0S6axZXvJX03psmmMniS2kqS\nhY1x\r\n=m+qC\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        { "email": "webmaster@goloroden.de", "name": "goloroden" },
+        {
+          "email": "jan-hendrik.grundhoefer@thenativeweb.io",
+          "name": "grundhoeferj"
+        },
+        { "email": "wagler@intuity.de", "name": "mattwagl" },
+        { "email": "hello@thenativeweb.io", "name": "thenativeweb-admin" }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/uuidv4_1.0.1_1528745488124_0.5014903849903347"
+      },
+      "_hasShrinkwrap": false
+    },
+    "2.0.0": {
+      "name": "uuidv4",
+      "version": "2.0.0",
+      "description": "uuid creates UUIDs.",
+      "contributors": [
+        { "name": "Golo Roden", "email": "golo.roden@thenativeweb.io" },
+        {
+          "name": "Matthias Wagler",
+          "email": "matthias.wagler@thenativeweb.io"
+        },
+        {
+          "name": "Jan-Hendrik Grundhöfer",
+          "email": "jan-hendrik.grundhoefer@thenativeweb.io"
+        },
+        { "name": "Sven Eppler", "email": "sven.eppler@sodgeit.de" }
+      ],
+      "main": "dist/uuidv4.js",
+      "dependencies": { "sha-1": "0.1.1", "uuid": "3.3.2" },
+      "devDependencies": { "assertthat": "1.0.0", "roboter": "1.0.7" },
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/thenativeweb/uuidv4.git"
+      },
+      "keywords": ["guid", "uuid"],
+      "license": "MIT",
+      "gitHead": "c8ceafd724ac74a2b3041275c337b06266701928",
+      "bugs": { "url": "https://github.com/thenativeweb/uuidv4/issues" },
+      "homepage": "https://github.com/thenativeweb/uuidv4#readme",
+      "_id": "uuidv4@2.0.0",
+      "_npmVersion": "6.4.1",
+      "_nodeVersion": "8.12.0",
+      "_npmUser": { "name": "goloroden", "email": "webmaster@goloroden.de" },
+      "dist": {
+        "integrity": "sha512-sAUlwUVepcVk6bwnaW/oi6LCwMdueako5QQzRr90ioAVVcms6p1mV0PaSxK8gyAC4CRvKddsk217uUpZUbKd2Q==",
+        "shasum": "3ec764288f9e9c4e40f8027ad309c2c528be2976",
+        "tarball": "https://registry.npmjs.org/uuidv4/-/uuidv4-2.0.0.tgz",
+        "fileCount": 6,
+        "unpackedSize": 6912,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJboMXyCRA9TVsSAnZWagAAXEAQAICh5fbS5Op6sbDqcOXx\nXHJgM0dCKW+zFRn9f+qtmNCS47AXY0B2L+mL/d2aVXRrhYozRFlhEd1q4t5g\ngpZ538CAdqGUxzbcQymr7vgt4MFKMu0EjSTL2O8GoJIHRE4BRE0neqQEg32a\nYJuLmz4QaJSXvaePuw2dSRJ+uFcyhdnia2KOJQ/Oyv4K7PzdyTXk0bZogvBJ\nKnG5xRXlxcN9LGCfuyYTV3CJhz+iQnh5RpnYUVNjpd8eGSQqo/INokWezpnF\nOOZPB2eLz9WJ8Mo4s5kCTIjqLKZGtSvD8jRZz3rHLKoLXeOcOCJn/tcfmsL2\nb53B4Ogngy0/JKwiGzHkIl0JWamMvyfC0Z2lvbVam2gsuurj+6IRCb39Qf1G\n11DCzWQFH2KcgfUx7eXQm3bzyVqW6WF4Ore4DlztSpVq0sIh1b8160Iio3e3\nBofKcLRydUAmkNE2j+sFztTTnZ1fqi4t25oLs/dlcn5IkjdxvlpCee1YA3Ll\nHGot14l5k1oU5uaXc9Ieg1+a/YOkXwJOfyJORXQi04LM8rPLm60A9No11KMl\n7C6TbhpwxE1aqHy02naU81Tl3xMHXWGppbP3DOY/JjxPLYpZf+aBU4O8itOU\nTPuwV8Y+S+WM2srYdMYHYDQQKKhPrQe5MGLEPo4VrgR6fGoP9ZxuCdtgosWF\njMTp\r\n=RBqK\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        { "email": "webmaster@goloroden.de", "name": "goloroden" },
+        {
+          "email": "jan-hendrik.grundhoefer@thenativeweb.io",
+          "name": "grundhoeferj"
+        },
+        { "email": "wagler@intuity.de", "name": "mattwagl" },
+        { "email": "hello@thenativeweb.io", "name": "thenativeweb-admin" }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/uuidv4_2.0.0_1537263090215_0.7543336571313193"
+      },
+      "_hasShrinkwrap": false
+    },
+    "3.0.0": {
+      "name": "uuidv4",
+      "version": "3.0.0",
+      "description": "uuid creates UUIDs.",
+      "contributors": [
+        { "name": "Golo Roden", "email": "golo.roden@thenativeweb.io" },
+        {
+          "name": "Matthias Wagler",
+          "email": "matthias.wagler@thenativeweb.io"
+        },
+        {
+          "name": "Jan-Hendrik Grundhöfer",
+          "email": "jan-hendrik.grundhoefer@thenativeweb.io"
+        },
+        { "name": "Sven Eppler", "email": "sven.eppler@sodgeit.de" }
+      ],
+      "main": "dist/uuidv4.js",
+      "dependencies": { "uuid": "3.3.2" },
+      "devDependencies": { "assertthat": "2.0.1", "roboter": "4.0.0" },
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/thenativeweb/uuidv4.git"
+      },
+      "keywords": ["guid", "uuid"],
+      "license": "MIT",
+      "gitHead": "e97a6f486e3f9f3674f593873e6fb5944b273999",
+      "bugs": { "url": "https://github.com/thenativeweb/uuidv4/issues" },
+      "homepage": "https://github.com/thenativeweb/uuidv4#readme",
+      "_id": "uuidv4@3.0.0",
+      "_npmVersion": "6.4.1",
+      "_nodeVersion": "10.13.0",
+      "_npmUser": { "name": "goloroden", "email": "webmaster@goloroden.de" },
+      "dist": {
+        "integrity": "sha512-AETD7d+4P8kTUhc13Fw5fb50+mQ0stuuTybd9WB96VfyBP4KiZpKUyJwvv4ZoWQ9TRxWHY24Iog9zRYl+UEPpA==",
+        "shasum": "42faf6e60129b0de00e82bd07629c23fa7c5f6fe",
+        "tarball": "https://registry.npmjs.org/uuidv4/-/uuidv4-3.0.0.tgz",
+        "fileCount": 6,
+        "unpackedSize": 6700,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcYE3ACRA9TVsSAnZWagAAmSUP/2jnHA+cr8OFqhayhQX0\nhDDXRNrZCXDRjzdm/dNfnTrqjlivuKlE1uUCrWSlEP80A07fx4drTRNH8Bz/\njMFw9VEP9Ak4gQceUB6laS1BrTLBibg0YjvmmuKo/wqtDnSVT/Dz2i5f4Vvm\nAs2UtPLzD/k1nuP7H+TJwhEVjQCXfm1HRVGhVhLkmJFanFJmcqITibWHc/X1\nkYXu7ZoP7y5ParMnkffwKhE4zmriqItgz+uhRnLuXfDAMAfaG8ah8ixCSwPB\nrSjbW3H0pjKEU+9iQPk+kDGOVeYKjZxQ72syvPDTuetWWJxZfvJT5X5mmyA/\njfzK5o8ZLEpNu4tP+V6ms1f33B3sUbpooJdRSlC9KFGtsjoIdYeuR/0RPgF3\nrTlks5eSLCKrNu8xMwuEQ4/7V4O+Gfh4Q40Rilyd39j3mpaVQUQghbalrvE5\nve9ojPqT43RGO7CYc9isbkeRs4OU67VYrsGRQ6iEpWLXduXdr1XmNJ2OAxQO\nL0/P+tP1aBNa7EGjjsoCXGqs8oJkE7fZ1OVXskF41T7klQxwszl5PGPX1Cdx\n37gaz29nCfp3l4gS4d1M4U7n52ju4dls+d2PxmXqtm0IjqTwr15wgBmlobwa\nWAfROOQPeJwaiVoScxeFEjg4fKFRc1GQFiCf9BO5Jqv6gwX5DvEYw0pZbBcd\nRIWu\r\n=GuwK\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        { "email": "webmaster@goloroden.de", "name": "goloroden" },
+        {
+          "email": "jan-hendrik.grundhoefer@thenativeweb.io",
+          "name": "grundhoeferj"
+        },
+        { "email": "wagler@intuity.de", "name": "mattwagl" },
+        { "email": "hello@thenativeweb.io", "name": "thenativeweb-admin" }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/uuidv4_3.0.0_1549815231548_0.29055366424173545"
+      },
+      "_hasShrinkwrap": false
+    },
+    "3.0.1": {
+      "name": "uuidv4",
+      "version": "3.0.1",
+      "description": "uuid creates UUIDs.",
+      "contributors": [
+        { "name": "Golo Roden", "email": "golo.roden@thenativeweb.io" },
+        {
+          "name": "Matthias Wagler",
+          "email": "matthias.wagler@thenativeweb.io"
+        },
+        {
+          "name": "Jan-Hendrik Grundhöfer",
+          "email": "jan-hendrik.grundhoefer@thenativeweb.io"
+        },
+        { "name": "Sven Eppler", "email": "sven.eppler@sodgeit.de" }
+      ],
+      "main": "dist/uuidv4.js",
+      "dependencies": { "uuid": "3.3.2" },
+      "devDependencies": { "assertthat": "2.0.1", "roboter": "4.0.0" },
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/thenativeweb/uuidv4.git"
+      },
+      "keywords": ["guid", "uuid"],
+      "license": "MIT",
+      "gitHead": "6f84685e8e430d17d2a058ebdc08122347959fa4",
+      "bugs": { "url": "https://github.com/thenativeweb/uuidv4/issues" },
+      "homepage": "https://github.com/thenativeweb/uuidv4#readme",
+      "_id": "uuidv4@3.0.1",
+      "_npmVersion": "6.4.1",
+      "_nodeVersion": "10.13.0",
+      "_npmUser": { "name": "goloroden", "email": "webmaster@goloroden.de" },
+      "dist": {
+        "integrity": "sha512-PPzksdWRl2a5C9hrs3OOYrArTeyoR0ftJ3jtOy+BnVHkT2UlrrzPNt9nTdiGuxmQItHM/AcTXahwZZC57Njojg==",
+        "shasum": "31751b0ab78f50c9e42dbf231693210b3435b673",
+        "tarball": "https://registry.npmjs.org/uuidv4/-/uuidv4-3.0.1.tgz",
+        "fileCount": 6,
+        "unpackedSize": 7658,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcYU8aCRA9TVsSAnZWagAALjYP/jCvnuq5myAD76ipjH3k\nDnt1gx7NLh/JtuH8Xm38xIHl4USDEBkk00drtVrh6q9pBpHn2/E4APIwGNjQ\nqgLC22pdOGOP5vxi6Eph9jULA3Fg+oJWKiQmOu3B+6R0KF4+pePyy3OO8QGF\n/6mOlTkZronG9TWBDq/aUf0ko0KM3f8nlZYwzCI7BVAtEA8wjRsX1sD05mt3\nHBWES/K39bc13XuR+dRogWMZAYyqLQ37WL6jLpHMiCbur5eb6uW3gbTrDE/P\nlzpQXEkHFTWfkMTmlSRls2RdKpV98TmhhGm0/3LIW/AlwQMJq6EWyol9VN7l\npIVqWK2kuu7cBOIfvJ0GSdOW9FpXdSzOeoGDPUzv6veW1hwtwsTrp65fhHH2\n653SQ6CtDtkkdhflOiRbbOyptm7m7VPrwXCInZrpbJBgCt4cQRSSI+QJilWU\nmXjAwzGFhpbdo1cqkgO3QsisS0lferciXw/4D20kr119sdjowJ4svGZs/qAW\nlQXZ/mCiOqz0OIW+Unoulfy+YO848ZY51f4uqsN+00Ep+TIXNaP/0p74Bc9x\n7EjNORexhVLAieGpK8hJ35cRWs4wxoUvdjtfcjuj0sWqehCwNoPHlQlDYXmk\nvQye7DyGLsGU6alSYoi/6ZLj3tySVN/KK8nh4hqJYKaARB2OSDHiQEFoEyDt\nkZsf\r\n=XVMb\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        { "email": "webmaster@goloroden.de", "name": "goloroden" },
+        {
+          "email": "jan-hendrik.grundhoefer@thenativeweb.io",
+          "name": "grundhoeferj"
+        },
+        { "email": "wagler@intuity.de", "name": "mattwagl" },
+        { "email": "hello@thenativeweb.io", "name": "thenativeweb-admin" }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/uuidv4_3.0.1_1549881113388_0.5666879554153827"
+      },
+      "_hasShrinkwrap": false
+    },
+    "4.0.0": {
+      "name": "uuidv4",
+      "version": "4.0.0",
+      "description": "uuid creates UUIDs.",
+      "contributors": [
+        { "name": "Golo Roden", "email": "golo.roden@thenativeweb.io" },
+        {
+          "name": "Matthias Wagler",
+          "email": "matthias.wagler@thenativeweb.io"
+        },
+        {
+          "name": "Jan-Hendrik Grundhöfer",
+          "email": "jan-hendrik.grundhoefer@thenativeweb.io"
+        },
+        { "name": "Sven Eppler", "email": "sven.eppler@sodgeit.de" }
+      ],
+      "main": "lib/uuidv4.js",
+      "dependencies": { "uuid": "3.3.2" },
+      "devDependencies": { "assertthat": "2.0.3", "roboter": "4.0.3" },
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/thenativeweb/uuidv4.git"
+      },
+      "keywords": ["guid", "uuid"],
+      "license": "MIT",
+      "gitHead": "87287988141ffaa7e282448e3c8079c88ffef591",
+      "bugs": { "url": "https://github.com/thenativeweb/uuidv4/issues" },
+      "homepage": "https://github.com/thenativeweb/uuidv4#readme",
+      "_id": "uuidv4@4.0.0",
+      "_npmVersion": "6.4.1",
+      "_nodeVersion": "10.13.0",
+      "_npmUser": { "name": "goloroden", "email": "webmaster@goloroden.de" },
+      "dist": {
+        "integrity": "sha512-mG90kcW04v6frNmnLsnd7xqiKubIYgaQHxaHoBplAJpR95hgqkTDq8wpZQU5cN5w9gtKphqdsflHoEnXr2+ing==",
+        "shasum": "ac4b05ecf0efa62dda532d55b7a8de8f726f8f7c",
+        "tarball": "https://registry.npmjs.org/uuidv4/-/uuidv4-4.0.0.tgz",
+        "fileCount": 4,
+        "unpackedSize": 4427,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcoySGCRA9TVsSAnZWagAAYtQP/13YVYCOMMBFzQPGl5a7\naMw2IAw3c2mQ7G0rD+p0arDdp92n1L5vhvPezCTOGF3/jugDLNAuZQJsapVY\n2RDcpZ0vPtxcBw9oCrykN5okDb4PCe8vVARckfMAnWLDYQhn7pwzJt8sAbJ7\niaDkyYGws7KWwJNMh0CmCEqnr1Kac+0iSrGF1v/jhmcsq2ZsDCt4dixDGNho\nnJSPJffzLWm4rjrQ/KmyWBXijTnw2c6ilqA9qMqa2f952xxYizvx1cbW/2/c\ntXQNAzCIFB/ZWd6h5ICdAN1fZqxd3+HJr7l3AniTkqE80RMHRd4i07evsWKm\nBkogiEv9X9qOuVcEUGIUdwTTl7BuPnXekxJwHtwjUuNA8JBIOV8IqqNX5hm2\naUaxMhTwmjPQXBLNY1wHCJVRmGnh6k4RDvcg8pMaUoe1plleP9+9a5yCrxMV\n9LXg7foMSYE/LclC3MrPWHIM8u2R3UxdVN+OZxwfoqQdoxeOhgdhS2C13wf4\nhU9urVBD5GUAN2AAF4zS9aFf5Ca1yOvlJR4vE4c64IhuQiYo8VQe//bRzt9d\nYL2Wm8NA9+NGiNIdAWxtN3z54AK4JFoqvUUhwQgz5BpjNf6G4x70RIca23SP\ns0XnuNoW5VuK6wwOf0hk8ws6eYdJWX3r6szu1FW2ojl6eWrghyuhCc1ff6bc\n1vxd\r\n=bniB\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        { "email": "webmaster@goloroden.de", "name": "goloroden" },
+        {
+          "email": "jan-hendrik.grundhoefer@thenativeweb.io",
+          "name": "grundhoeferj"
+        },
+        { "email": "wagler@intuity.de", "name": "mattwagl" },
+        { "email": "hello@thenativeweb.io", "name": "thenativeweb-admin" }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/uuidv4_4.0.0_1554195589674_0.6717170646852162"
+      },
+      "_hasShrinkwrap": false
+    },
+    "5.0.0": {
+      "name": "uuidv4",
+      "version": "5.0.0",
+      "description": "uuid creates UUIDs.",
+      "contributors": [
+        { "name": "Golo Roden", "email": "golo.roden@thenativeweb.io" },
+        {
+          "name": "Matthias Wagler",
+          "email": "matthias.wagler@thenativeweb.io"
+        },
+        {
+          "name": "Jan-Hendrik Grundhöfer",
+          "email": "jan-hendrik.grundhoefer@thenativeweb.io"
+        },
+        { "name": "Sven Eppler", "email": "sven.eppler@sodgeit.de" },
+        {
+          "name": "Hannes Leutloff",
+          "email": "hannes.leutloff@thenativeweb.io"
+        }
+      ],
+      "main": "build/lib/uuidv4.js",
+      "types": "build/lib/uuidv4.d.ts",
+      "dependencies": { "uuid": "3.3.3" },
+      "devDependencies": {
+        "@types/uuid": "3.4.5",
+        "assertthat": "4.0.1",
+        "roboter": "7.1.1"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/thenativeweb/uuidv4.git"
+      },
+      "keywords": ["guid", "uuid"],
+      "license": "MIT",
+      "gitHead": "f9ac2b2a86eab1fd1637260b124fd384a18b698c",
+      "bugs": { "url": "https://github.com/thenativeweb/uuidv4/issues" },
+      "homepage": "https://github.com/thenativeweb/uuidv4#readme",
+      "_id": "uuidv4@5.0.0",
+      "_nodeVersion": "12.8.0",
+      "_npmVersion": "6.10.2",
+      "dist": {
+        "integrity": "sha512-boT7UlSbV/URrOsGqASNSOvkcsblLc6FfbazdMORgUQdcZfmBQAqdgbf3rcuxx3ZWVYxCYByto9/Z8M28x050w==",
+        "shasum": "a3a0e58f55b33de3ad06cd91f1ec1967e0460965",
+        "tarball": "https://registry.npmjs.org/uuidv4/-/uuidv4-5.0.0.tgz",
+        "fileCount": 8,
+        "unpackedSize": 7232,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdZns2CRA9TVsSAnZWagAAFMkP/0YBYLM8sbpsLongI2mz\nV1KRENNnuPoA3X25qAa8YvnmNY5OWVIS50lXy+1a1YURP/hosmKDRpK5fNzL\njwEzoBeIVfho2PGE/fTq249zZDsE2qnpELK/VM4B3bltib/6etn/g72OcW58\nRUGeggCIpbvPbKthrbr2lDjJy729QsVHkZsxl9rQ8+GE0F2fHoWRH3IsrVUR\nKV7nMuNn80SIAPxbYqAYKatpGQbR6feeY/HHiQlGa20gU1xROLDBbdJLKEG0\nKdYWcXtjIUvN4z8RoOHRcIl4FmOO1PIeZQbDIFC0ciK/m/jowe1rRYhZOc47\nRkt1SI/fwXDf2LZRk+wwFGzZe/cCHuq1kAT23KZhzIayw2XRUMy0c4rQJNgV\ncI2l4u2T6iFwfPpgYIFh51fdeEcdiHweErNsMqK878tjR8O79zVgK7SMiZsl\nMPH5D+2VGgdp6du1DUPekEGf7BQn1nXxZyKht9HVLENLd32XJt/5Z4RxQI2G\nsc3JI6NxW6G+5Oc+hzB4yJ+w7oGEiUxykjZIj8FB/jZQ+k9oaIELaQGeMz80\nNpEpuBmbvx59cwLoTfhJvo+AHcXLXXKuRYvRJ3KWl02UGxpkO1/JrvT5QsoY\nr7P0+FkAlI+YZNbobAE37arMTFsXob8TPasdJs2I/bW8uC2oau3ccSrkzIve\nmKRe\r\n=q2dB\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        { "email": "golo.roden@thenativeweb.io", "name": "goloroden" },
+        {
+          "email": "jan-hendrik.grundhoefer@thenativeweb.io",
+          "name": "grundhoeferj"
+        },
+        { "email": "wagler@intuity.de", "name": "mattwagl" },
+        { "email": "hello@thenativeweb.io", "name": "thenativeweb-admin" },
+        { "email": "valentina.rotkin@thenativeweb.io", "name": "vaalllaa" },
+        { "email": "hannes.leutloff@yeldirium.de", "name": "yeldir" }
+      ],
+      "_npmUser": { "name": "yeldir", "email": "hannes.leutloff@yeldirium.de" },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/uuidv4_5.0.0_1566997301925_0.9443192016285988"
+      },
+      "_hasShrinkwrap": false
+    },
+    "5.0.1": {
+      "name": "uuidv4",
+      "version": "5.0.1",
+      "description": "uuid creates UUIDs.",
+      "contributors": [
+        { "name": "Golo Roden", "email": "golo.roden@thenativeweb.io" },
+        {
+          "name": "Matthias Wagler",
+          "email": "matthias.wagler@thenativeweb.io"
+        },
+        {
+          "name": "Jan-Hendrik Grundhöfer",
+          "email": "jan-hendrik.grundhoefer@thenativeweb.io"
+        },
+        { "name": "Sven Eppler", "email": "sven.eppler@sodgeit.de" },
+        {
+          "name": "Hannes Leutloff",
+          "email": "hannes.leutloff@thenativeweb.io"
+        }
+      ],
+      "main": "build/lib/uuidv4.js",
+      "types": "build/lib/uuidv4.d.ts",
+      "dependencies": { "uuid": "3.3.3" },
+      "devDependencies": {
+        "@types/uuid": "3.4.5",
+        "assertthat": "4.0.1",
+        "roboter": "7.1.5"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/thenativeweb/uuidv4.git"
+      },
+      "keywords": ["guid", "uuid"],
+      "license": "MIT",
+      "gitHead": "945461567853686a425d0b775e67b7e6802168c6",
+      "bugs": { "url": "https://github.com/thenativeweb/uuidv4/issues" },
+      "homepage": "https://github.com/thenativeweb/uuidv4#readme",
+      "_id": "uuidv4@5.0.1",
+      "_nodeVersion": "12.9.0",
+      "_npmVersion": "6.10.2",
+      "dist": {
+        "integrity": "sha512-cN41lQQZ8ke/1WsvAFh0doSfYunVa8iSNkeBN+UjrmCQ93VFMKMCep5L0qJyr3qaO4htAuU7JTDENIwxC/Itdg==",
+        "shasum": "4fef23041b6de462ec0d7b71794e5b23bcd62568",
+        "tarball": "https://registry.npmjs.org/uuidv4/-/uuidv4-5.0.1.tgz",
+        "fileCount": 8,
+        "unpackedSize": 7232,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdcRDJCRA9TVsSAnZWagAA1gwP/Al2lSmD5oWgivPpVJBh\n3fhjMkAay6/ENiwTLlcvZ7i88hHXxD3fWG5iknRo7z9QCQWJr/71/KfEO8Bj\nOCSJhfAj/WkJZ7YML1vdn/CHuXsQz8GmoqDOKivqSv84l74lP9HogaibZwsh\ntKj5MVx5e9Ri0R2r+0Fe7C3C/Rv7WQ1jvOp2iUobI/tO4Td7oWq9y/DwxLlF\nrVLWrcY/83Y+oh3IXRfMVRhMyKG83EwevT2/6xRBgl6fqSfde4erFo/bB0q3\nQSQNH+6ut5zl3skThL0dwPIbQ7P319C4OpVZ6aCKw5dRrkKSvWTEcxOwoRax\n7KcF6TI9JHfyDHxCcPUHQQdpyIy1zWMnNuaJxTbWMI2Gbs0BS34LLfWERIHp\nIyrK2dzsQg8L9hAaMZZ2iV8ZAJn7jsVVVrHz63CxdIWwZlM7M+ZFN45umbj9\n561JddmnHZkhQycAFPa1N8C1K5z6/17hZ5kC4fqZcwq6osTuVv2VTykF4If9\nNFSgfpmadRyfAs8ozrPhxldvvqbv+j13YZ1ADB9NcDIlbLYg9FE7h2r18zr0\nOU/VXRuYn5jvKFCG6bc7xwFVnCaZf5HdXbJ1IEK/mQNm9xVGnUcCIe/Xzh0b\nZar/OPALxBXCLBEEIvM7c9HBKp+14FLkLWE+aZHRNkL9BTS56CMmCiyDJt9H\njHiX\r\n=/hBP\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        { "email": "golo.roden@thenativeweb.io", "name": "goloroden" },
+        {
+          "email": "jan-hendrik.grundhoefer@thenativeweb.io",
+          "name": "grundhoeferj"
+        },
+        { "email": "wagler@intuity.de", "name": "mattwagl" },
+        { "email": "hello@thenativeweb.io", "name": "thenativeweb-admin" },
+        { "email": "valentina.rotkin@thenativeweb.io", "name": "vaalllaa" },
+        { "email": "hannes.leutloff@yeldirium.de", "name": "yeldir" }
+      ],
+      "_npmUser": {
+        "name": "thenativeweb-admin",
+        "email": "hello@thenativeweb.io"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/uuidv4_5.0.1_1567690953115_0.8345096318897363"
+      },
+      "_hasShrinkwrap": false
+    }
+  },
+  "readme": "# uuid\n\nuuid creates v4 UUIDs.\n\n## Status\n\n| Category         | Status                                                                                                                                   |\n| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |\n| Version          | [![npm](https://img.shields.io/npm/v/uuidv4)](https://www.npmjs.com/package/uuidv4)                                                      |\n| Dependencies     | ![David](https://img.shields.io/david/thenativeweb/uuidv4)                                                                               |\n| Dev dependencies | ![David](https://img.shields.io/david/dev/thenativeweb/uuidv4)                                                                           |\n| Build            | [![CircleCI](https://img.shields.io/circleci/build/github/thenativeweb/uuidv4)](https://circleci.com/gh/thenativeweb/uuidv4/tree/master) |\n| License          | ![GitHub](https://img.shields.io/github/license/thenativeweb/uuidv4)                                                                     |\n\n## Installation\n\n```shell\n$ npm install uuidv4\n```\n\n## Quick start\n\nFirst you need to integrate uuidv4 into your project by using the `require` function:\n\n```javascript\nconst uuid = require('uuidv4').default;\n```\n\nIf you use TypeScript, use the following code instead:\n\n```typescript\nimport uuid from 'uuidv4';\n```\n\nThen you can create UUIDs. To do so simply call the `uuid` function:\n\n```javascript\nconsole.log(uuid());\n// => '11bf5b37-e0b8-42e0-8dcf-dc8c4aefc000'\n```\n\n### Verifying a UUID\n\nTo verify whether a given value is a UUID, use the `is` function:\n\n```javascript\nconsole.log(uuid.is('75442486-0878-440c-9db1-a7006c25a39f'));\n// => true\n```\n\n_Please note that the `is` function returns `true` for both, `v4` and `v5` UUIDs. In addition, `is` returns `true` for `uuid.empty()`._\n\nIf you want to perform the verification on your own, use the `regex` property, and access its `v4` or `v5` property, depending on what you need:\n\n```javascript\nconsole.log(uuid.regex.v4);\nconsole.log(uuid.regex.v5);\n```\n\n_Please note that the regular expressions also consider `uuid.empty()` to be a valid UUID._\n\n### Getting a UUID from a string\n\nFrom time to time you need an identifier that looks like a UUID, but is actually inferred from a string. For that, use the `fromString` function, which returns a UUID `v5`:\n\n```javascript\nconsole.log(uuid.fromString('the native web'));\n// => 'cdb63720-9628-5ef6-bbca-2e5ce6094f3c'\n```\n\n### Getting the empty UUID\n\nIf you need a UUID that consists only of zeros, use the `empty` function:\n\n```javascript\nconsole.log(uuid.empty());\n// => '00000000-0000-0000-0000-000000000000'\n```\n\n## Running the build\n\nTo build this module use [roboter](https://www.npmjs.com/package/roboter).\n\n```shell\n$ npx roboter\n```\n",
+  "maintainers": [
+    { "email": "golo.roden@thenativeweb.io", "name": "goloroden" },
+    {
+      "email": "jan-hendrik.grundhoefer@thenativeweb.io",
+      "name": "grundhoeferj"
+    },
+    { "email": "wagler@intuity.de", "name": "mattwagl" },
+    { "email": "hello@thenativeweb.io", "name": "thenativeweb-admin" },
+    { "email": "valentina.rotkin@thenativeweb.io", "name": "vaalllaa" },
+    { "email": "hannes.leutloff@yeldirium.de", "name": "yeldir" }
+  ],
+  "time": {
+    "modified": "2019-09-05T13:42:37.291Z",
+    "created": "2014-10-08T15:29:00.806Z",
+    "0.3.0": "2014-10-08T15:29:00.806Z",
+    "0.3.1": "2015-02-12T23:36:11.416Z",
+    "0.4.0": "2016-11-11T05:31:54.282Z",
+    "0.4.1": "2017-02-23T09:53:30.541Z",
+    "0.5.0": "2017-04-07T13:30:32.465Z",
+    "1.0.0": "2018-02-08T16:32:26.900Z",
+    "1.0.1": "2018-06-11T19:31:28.195Z",
+    "2.0.0": "2018-09-18T09:31:30.327Z",
+    "3.0.0": "2019-02-10T16:13:51.691Z",
+    "3.0.1": "2019-02-11T10:31:53.501Z",
+    "4.0.0": "2019-04-02T08:59:49.841Z",
+    "5.0.0": "2019-08-28T13:01:42.032Z",
+    "5.0.1": "2019-09-05T13:42:33.277Z"
+  },
+  "homepage": "https://github.com/thenativeweb/uuidv4#readme",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thenativeweb/uuidv4.git"
+  },
+  "contributors": [
+    { "name": "Golo Roden", "email": "golo.roden@thenativeweb.io" },
+    { "name": "Matthias Wagler", "email": "matthias.wagler@thenativeweb.io" },
+    {
+      "name": "Jan-Hendrik Grundhöfer",
+      "email": "jan-hendrik.grundhoefer@thenativeweb.io"
+    },
+    { "name": "Sven Eppler", "email": "sven.eppler@sodgeit.de" },
+    { "name": "Hannes Leutloff", "email": "hannes.leutloff@thenativeweb.io" }
+  ],
+  "bugs": { "url": "https://github.com/thenativeweb/uuidv4/issues" },
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "keywords": ["guid", "uuid"]
+}

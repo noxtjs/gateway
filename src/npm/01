@@ -1,0 +1,75 @@
+yarn add v1.17.3
+verbose 0.316064005 Checking for configuration file "/Users/erukiti/work/toybox/npm-analysis/.npmrc".
+verbose 0.316922645 Checking for configuration file "/Users/erukiti/.npmrc".
+verbose 0.317107849 Found configuration file "/Users/erukiti/.npmrc".
+verbose 0.324355812 Checking for configuration file "/Users/erukiti/.anyenv/envs/nodenv/versions/12.6.0/etc/npmrc".
+verbose 0.325720205 Checking for configuration file "/Users/erukiti/work/toybox/npm-analysis/.npmrc".
+verbose 0.326733602 Checking for configuration file "/Users/erukiti/work/toybox/.npmrc".
+verbose 0.327772825 Checking for configuration file "/Users/erukiti/work/.npmrc".
+verbose 0.327905237 Checking for configuration file "/Users/erukiti/.npmrc".
+verbose 0.3280112 Found configuration file "/Users/erukiti/.npmrc".
+verbose 0.331705434 Checking for configuration file "/Users/.npmrc".
+verbose 0.333985759 Checking for configuration file "/Users/erukiti/work/toybox/npm-analysis/.yarnrc".
+verbose 0.334182793 Checking for configuration file "/Users/erukiti/.yarnrc".
+verbose 0.334362816 Found configuration file "/Users/erukiti/.yarnrc".
+verbose 0.334878311 Checking for configuration file "/Users/erukiti/.anyenv/envs/nodenv/versions/12.6.0/etc/yarnrc".
+verbose 0.335045393 Checking for configuration file "/Users/erukiti/work/toybox/npm-analysis/.yarnrc".
+verbose 0.335202533 Checking for configuration file "/Users/erukiti/work/toybox/.yarnrc".
+verbose 0.335352365 Checking for configuration file "/Users/erukiti/work/.yarnrc".
+verbose 0.335468566 Checking for configuration file "/Users/erukiti/.yarnrc".
+verbose 0.335616009 Found configuration file "/Users/erukiti/.yarnrc".
+verbose 0.335928246 Checking for configuration file "/Users/.yarnrc".
+verbose 0.339938096 current time: 2019-09-17T19:34:51.560Z
+info No lockfile found.
+[1/4] 🔍  Resolving packages...
+verbose 0.398104652 Performing "GET" request to "https://registry.yarnpkg.com/uuidv4".
+verbose 1.230874775 Request "https://registry.yarnpkg.com/uuidv4" finished with status code 200.
+verbose 1.235094189 Performing "GET" request to "https://registry.yarnpkg.com/uuid".
+verbose 1.267689963 Request "https://registry.yarnpkg.com/uuid" finished with status code 200.
+[2/4] 🚚  Fetching packages...
+verbose 1.292337811 Performing "GET" request to "https://registry.yarnpkg.com/uuid/-/uuid-3.3.3.tgz".
+verbose 1.299558071 Performing "GET" request to "https://registry.yarnpkg.com/uuidv4/-/uuidv4-5.0.1.tgz".
+[3/4] 🔗  Linking dependencies...
+verbose 1.443740519 Creating directory "/Users/erukiti/work/toybox/npm-analysis/node_modules/uuidv4".
+verbose 1.443961612 Creating directory "/Users/erukiti/work/toybox/npm-analysis/node_modules/uuid".
+verbose 1.446396745 Creating directory "/Users/erukiti/work/toybox/npm-analysis/node_modules/uuidv4/build".
+verbose 1.446625138 Creating directory "/Users/erukiti/work/toybox/npm-analysis/node_modules/uuidv4/lib".
+verbose 1.446797372 Creating directory "/Users/erukiti/work/toybox/npm-analysis/node_modules/uuid/bin".
+verbose 1.446931251 Creating directory "/Users/erukiti/work/toybox/npm-analysis/node_modules/uuid/lib".
+verbose 1.447814235 Creating directory "/Users/erukiti/work/toybox/npm-analysis/node_modules/uuidv4/build/lib".
+verbose 1.448932528 Copying "/Users/erukiti/Library/Caches/Yarn/v4/npm-uuidv4-5.0.1-4fef23041b6de462ec0d7b71794e5b23bcd62568/node_modules/uuidv4/README.md" to "/Users/erukiti/work/toybox/npm-analysis/node_modules/uuidv4/README.md".
+verbose 1.449387416 Copying "/Users/erukiti/Library/Caches/Yarn/v4/npm-uuidv4-5.0.1-4fef23041b6de462ec0d7b71794e5b23bcd62568/node_modules/uuidv4/.eslintrc.json" to "/Users/erukiti/work/toybox/npm-analysis/node_modules/uuidv4/.eslintrc.json".
+verbose 1.449595501 Copying "/Users/erukiti/Library/Caches/Yarn/v4/npm-uuidv4-5.0.1-4fef23041b6de462ec0d7b71794e5b23bcd62568/node_modules/uuidv4/package.json" to "/Users/erukiti/work/toybox/npm-analysis/node_modules/uuidv4/package.json".
+verbose 1.449768988 Copying "/Users/erukiti/Library/Caches/Yarn/v4/npm-uuidv4-5.0.1-4fef23041b6de462ec0d7b71794e5b23bcd62568/node_modules/uuidv4/tsconfig.json" to "/Users/erukiti/work/toybox/npm-analysis/node_modules/uuidv4/tsconfig.json".
+verbose 1.449926942 Copying "/Users/erukiti/Library/Caches/Yarn/v4/npm-uuid-3.3.3-4568f0216e78760ee1dbf3a4d2cf53e224112866/node_modules/uuid/CHANGELOG.md" to "/Users/erukiti/work/toybox/npm-analysis/node_modules/uuid/CHANGELOG.md".
+verbose 1.450081379 Copying "/Users/erukiti/Library/Caches/Yarn/v4/npm-uuid-3.3.3-4568f0216e78760ee1dbf3a4d2cf53e224112866/node_modules/uuid/README.md" to "/Users/erukiti/work/toybox/npm-analysis/node_modules/uuid/README.md".
+verbose 1.450235606 Copying "/Users/erukiti/Library/Caches/Yarn/v4/npm-uuid-3.3.3-4568f0216e78760ee1dbf3a4d2cf53e224112866/node_modules/uuid/AUTHORS" to "/Users/erukiti/work/toybox/npm-analysis/node_modules/uuid/AUTHORS".
+verbose 1.450382388 Copying "/Users/erukiti/Library/Caches/Yarn/v4/npm-uuid-3.3.3-4568f0216e78760ee1dbf3a4d2cf53e224112866/node_modules/uuid/LICENSE.md" to "/Users/erukiti/work/toybox/npm-analysis/node_modules/uuid/LICENSE.md".
+verbose 1.45052765 Copying "/Users/erukiti/Library/Caches/Yarn/v4/npm-uuid-3.3.3-4568f0216e78760ee1dbf3a4d2cf53e224112866/node_modules/uuid/index.js" to "/Users/erukiti/work/toybox/npm-analysis/node_modules/uuid/index.js".
+verbose 1.450672041 Copying "/Users/erukiti/Library/Caches/Yarn/v4/npm-uuid-3.3.3-4568f0216e78760ee1dbf3a4d2cf53e224112866/node_modules/uuid/package.json" to "/Users/erukiti/work/toybox/npm-analysis/node_modules/uuid/package.json".
+verbose 1.450816478 Copying "/Users/erukiti/Library/Caches/Yarn/v4/npm-uuidv4-5.0.1-4fef23041b6de462ec0d7b71794e5b23bcd62568/node_modules/uuidv4/LICENSE.txt" to "/Users/erukiti/work/toybox/npm-analysis/node_modules/uuidv4/LICENSE.txt".
+verbose 1.450962315 Copying "/Users/erukiti/Library/Caches/Yarn/v4/npm-uuid-3.3.3-4568f0216e78760ee1dbf3a4d2cf53e224112866/node_modules/uuid/v3.js" to "/Users/erukiti/work/toybox/npm-analysis/node_modules/uuid/v3.js".
+verbose 1.451101345 Copying "/Users/erukiti/Library/Caches/Yarn/v4/npm-uuid-3.3.3-4568f0216e78760ee1dbf3a4d2cf53e224112866/node_modules/uuid/v1.js" to "/Users/erukiti/work/toybox/npm-analysis/node_modules/uuid/v1.js".
+verbose 1.451241082 Copying "/Users/erukiti/Library/Caches/Yarn/v4/npm-uuid-3.3.3-4568f0216e78760ee1dbf3a4d2cf53e224112866/node_modules/uuid/v4.js" to "/Users/erukiti/work/toybox/npm-analysis/node_modules/uuid/v4.js".
+verbose 1.451382116 Copying "/Users/erukiti/Library/Caches/Yarn/v4/npm-uuid-3.3.3-4568f0216e78760ee1dbf3a4d2cf53e224112866/node_modules/uuid/v5.js" to "/Users/erukiti/work/toybox/npm-analysis/node_modules/uuid/v5.js".
+verbose 1.451521743 Copying "/Users/erukiti/Library/Caches/Yarn/v4/npm-uuid-3.3.3-4568f0216e78760ee1dbf3a4d2cf53e224112866/node_modules/uuid/bin/uuid" to "/Users/erukiti/work/toybox/npm-analysis/node_modules/uuid/bin/uuid".
+verbose 1.451662492 Copying "/Users/erukiti/Library/Caches/Yarn/v4/npm-uuidv4-5.0.1-4fef23041b6de462ec0d7b71794e5b23bcd62568/node_modules/uuidv4/lib/uuidv4.ts" to "/Users/erukiti/work/toybox/npm-analysis/node_modules/uuidv4/lib/uuidv4.ts".
+verbose 1.451809991 Copying "/Users/erukiti/Library/Caches/Yarn/v4/npm-uuid-3.3.3-4568f0216e78760ee1dbf3a4d2cf53e224112866/node_modules/uuid/lib/bytesToUuid.js" to "/Users/erukiti/work/toybox/npm-analysis/node_modules/uuid/lib/bytesToUuid.js".
+verbose 1.451957825 Copying "/Users/erukiti/Library/Caches/Yarn/v4/npm-uuid-3.3.3-4568f0216e78760ee1dbf3a4d2cf53e224112866/node_modules/uuid/lib/md5-browser.js" to "/Users/erukiti/work/toybox/npm-analysis/node_modules/uuid/lib/md5-browser.js".
+verbose 1.452104196 Copying "/Users/erukiti/Library/Caches/Yarn/v4/npm-uuid-3.3.3-4568f0216e78760ee1dbf3a4d2cf53e224112866/node_modules/uuid/lib/md5.js" to "/Users/erukiti/work/toybox/npm-analysis/node_modules/uuid/lib/md5.js".
+verbose 1.452252088 Copying "/Users/erukiti/Library/Caches/Yarn/v4/npm-uuid-3.3.3-4568f0216e78760ee1dbf3a4d2cf53e224112866/node_modules/uuid/lib/rng.js" to "/Users/erukiti/work/toybox/npm-analysis/node_modules/uuid/lib/rng.js".
+verbose 1.452393973 Copying "/Users/erukiti/Library/Caches/Yarn/v4/npm-uuid-3.3.3-4568f0216e78760ee1dbf3a4d2cf53e224112866/node_modules/uuid/lib/rng-browser.js" to "/Users/erukiti/work/toybox/npm-analysis/node_modules/uuid/lib/rng-browser.js".
+verbose 1.452539378 Copying "/Users/erukiti/Library/Caches/Yarn/v4/npm-uuid-3.3.3-4568f0216e78760ee1dbf3a4d2cf53e224112866/node_modules/uuid/lib/sha1-browser.js" to "/Users/erukiti/work/toybox/npm-analysis/node_modules/uuid/lib/sha1-browser.js".
+verbose 1.452684459 Copying "/Users/erukiti/Library/Caches/Yarn/v4/npm-uuid-3.3.3-4568f0216e78760ee1dbf3a4d2cf53e224112866/node_modules/uuid/lib/v35.js" to "/Users/erukiti/work/toybox/npm-analysis/node_modules/uuid/lib/v35.js".
+verbose 1.452825369 Copying "/Users/erukiti/Library/Caches/Yarn/v4/npm-uuid-3.3.3-4568f0216e78760ee1dbf3a4d2cf53e224112866/node_modules/uuid/lib/sha1.js" to "/Users/erukiti/work/toybox/npm-analysis/node_modules/uuid/lib/sha1.js".
+verbose 1.452965885 Copying "/Users/erukiti/Library/Caches/Yarn/v4/npm-uuidv4-5.0.1-4fef23041b6de462ec0d7b71794e5b23bcd62568/node_modules/uuidv4/build/lib/uuidv4.js" to "/Users/erukiti/work/toybox/npm-analysis/node_modules/uuidv4/build/lib/uuidv4.js".
+verbose 1.453109616 Copying "/Users/erukiti/Library/Caches/Yarn/v4/npm-uuidv4-5.0.1-4fef23041b6de462ec0d7b71794e5b23bcd62568/node_modules/uuidv4/build/lib/uuidv4.d.ts" to "/Users/erukiti/work/toybox/npm-analysis/node_modules/uuidv4/build/lib/uuidv4.d.ts".
+[4/4] 🔨  Building fresh packages...
+success Saved lockfile.
+success Saved 2 new dependencies.
+info Direct dependencies
+└─ uuidv4@5.0.1
+info All dependencies
+├─ uuid@3.3.3
+└─ uuidv4@5.0.1
+✨  Done in 1.23s.

@@ -1,0 +1,61 @@
+{
+  "name": "noxt-gateway",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "test:watch": "jest --watchAll"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.1",
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.7.5",
+    "@types/parcel-bundler": "^1.12.1"
+  },
+  "dependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.6.0",
+    "@babel/plugin-transform-runtime": "^7.6.0",
+    "@babel/plugin-transform-typescript": "^7.6.0",
+    "@babel/polyfill": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-typescript": "^7.6.0",
+    "@types/jszip": "^3.1.6",
+    "@types/node-fetch": "^2.5.0",
+    "@types/tar": "^4.0.3",
+    "@types/tar-fs": "^1.16.1",
+    "@types/tar-stream": "^1.6.1",
+    "arg": "^4.1.1",
+    "babel-jest": "^24.9.0",
+    "core-js": "3",
+    "core-js-compat": "^3.2.1",
+    "glob": "^7.1.4",
+    "gunzip-maybe": "^1.4.1",
+    "jest": "^24.9.0",
+    "jszip": "^3.2.2",
+    "node-fetch": "^2.6.0",
+    "parcel-bundler": "^1.12.3",
+    "regenerator-runtime": "^0.13.3",
+    "source-map-support": "^0.5.13",
+    "tar": "^4.4.11",
+    "tar-fs": "^2.0.0",
+    "tar-stream": "^2.1.0",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.6.3"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ],
+      "@babel/preset-typescript"
+    ]
+  }
+}
