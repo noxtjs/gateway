@@ -2,11 +2,38 @@ import path from 'path'
 
 import { fetchPkg } from './fetch-pkg'
 import { hackLoader, builtinModules, Module } from '../module-hack'
-import { compile } from '../transpile'
 
-const exec = async () => {
-  const pkgs = await fetchPkg('uuidv4')
+const resolveRelative = (requireStack: [string, string][], name: string) => {
+  const prev = requireStack[requireStack.length - 1]
+  console.log('prev', prev)
+  return [prev[0], path.join(path.dirname(prev[1]), name)]
+}
 
+const resolveFile = (pkg: any, modpath: string) => {
+  let name = modpath || pkg.info.main
+
+  const exts = ['.js', '.json', '.node']
+
+  if (exts.find(ext => name.endsWith(ext))) {
+    return name
+  }
+
+  const files = Object.keys(pkg.data).filter(n =>
+    exts.find(ext => n === `${name}${ext}` || n === `${name}/index${ext}`),
+  )
+  console.log(files)
+  if (files.length > 0) {
+    return files[0]
+  }
+
+  console.log('------------------------')
+  console.log(modpath)
+  console.log(Object.keys(pkg.data))
+  console.log('------------------------')
+  throw new Error(`not found ${modpath}`)
+}
+
+export const hackZeroinstall = (pkgs: any) => {
   const requireStack: [string, string][] = []
 
   hackLoader((name, parent, isMain) => {
@@ -15,46 +42,19 @@ const exec = async () => {
       return
     }
 
-    console.log('load', name, modname, modpath)
-
     const isRelative = name.startsWith('.') || name.startsWith('/')
-    if (requireStack.length === 0) {
-      if (isRelative) {
-        return
-      }
+    if (requireStack.length === 0 && isRelative) {
+      return
     }
 
     if (isRelative) {
-      const prev = requireStack[requireStack.length - 1]
-      console.log('prev', prev)
-      modname = prev[0]
-      modpath = path.join(path.dirname(prev[1]), name)
+      ;[modname, modpath] = resolveRelative(requireStack, name)
     }
 
-    console.log('  hack:', modname, modpath)
+    console.log('load hack:', name, modname, modpath)
 
-    let filename: string = pkgs[modname].info.main
-    if (modpath) {
-      filename = modpath
-    }
+    const filename = resolveFile(pkgs[modname], modpath)
 
-    const exts = ['.js', '.json', '.node']
-    if (!exts.find(ext => filename.endsWith(ext))) {
-      const files = Object.keys(pkgs[modname].data).filter(n =>
-        exts.find(
-          ext => n === `${filename}${ext}` || n === `${filename}/index${ext}`,
-        ),
-      )
-      console.log(files)
-      filename = files[0]
-    }
-
-    if (!filename) {
-      console.log('------------------------')
-      console.log(modpath)
-      console.log(Object.keys(pkgs[modname].data))
-      console.log('------------------------')
-    }
     requireStack.push([modname, filename])
     console.log('PUSH', [modname, filename])
 
@@ -65,17 +65,15 @@ const exec = async () => {
     console.log('R', requireStack.length, name, module.exports)
     return module.exports || null
   })
+}
+
+const exec = async () => {
+  const pkgs = await fetchPkg('uuidv4')
+
+  hackZeroinstall(pkgs)
 
   const uuidv4 = require('uuidv4').default
   console.log(uuidv4())
-
-  // Object.keys(pkgs).map(name => {
-  //   console.log(name)
-  //   const { data } = pkgs[name]
-  //   Object.keys(data).forEach(filename => {
-  //     console.log(filename, data[filename].length)
-  //   })
-  // })
 }
 
 exec()

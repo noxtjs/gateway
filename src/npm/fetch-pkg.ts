@@ -1,8 +1,6 @@
 import zlib from 'zlib'
-import { promisify } from 'util'
 
 import fetch from 'node-fetch'
-import JSZip from 'jszip'
 import tar from 'tar-stream'
 
 const extractTar = (tarball: NodeJS.ReadableStream) => {
@@ -28,24 +26,6 @@ const extractTar = (tarball: NodeJS.ReadableStream) => {
         stream.on('end', () => next())
       })
   })
-}
-
-const extractZip = async (buf: ArrayBuffer) => {
-  const tasks: Promise<{ buf: Buffer; name: string }>[] = []
-  const zip = new JSZip()
-  await zip.loadAsync(buf)
-  zip.forEach((relPath, file) => {
-    tasks.push(
-      new Promise((resolve, reject) => {
-        let buf = new Buffer('')
-        const st = file.nodeStream()
-        st.on('data', (data: any) => (buf = Buffer.concat(data)))
-        st.on('error', err => reject(err))
-        st.on('end', () => resolve({ buf, name: relPath }))
-      }),
-    )
-  })
-  return Promise.all(tasks)
 }
 
 export const fetchPkg = async (name: string, version?: string) => {
