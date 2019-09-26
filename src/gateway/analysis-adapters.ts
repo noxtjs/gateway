@@ -2,12 +2,11 @@ import fs from 'fs'
 import path from 'path'
 import { promisify } from 'util'
 
-import babel, { traverse, transformAsync } from '@babel/core'
+import { traverse, transformAsync } from '@babel/core'
 import { NodePath } from '@babel/traverse'
 
 import { Manifest } from './manifest'
-import { getNodePath, getNodePathArray } from '../utils'
-import { viewAst } from './babel/utils'
+import { getNodePath, getNodePathArray } from './babel/utils'
 
 const readFile = promisify(fs.readFile)
 
@@ -16,23 +15,23 @@ const typeParamsPath = 'id.typeAnnotation.typeAnnotation.typeParameters.params'
 
 export const analysisAdapters = async (filename: string) => {
   const manifests: Manifest[] = []
-  const codeImplementation = await readFile(filename, {
+  const impl = await readFile(filename, {
     encoding: 'utf-8',
   }).catch<Error | null>(err => (err.code === 'EISDIR' ? null : err))
 
-  if (codeImplementation === null) {
+  if (impl === null) {
     return []
   }
-  if (codeImplementation instanceof Error) {
-    throw codeImplementation
+  if (impl instanceof Error) {
+    throw impl
   }
 
-  const res = await transformAsync(codeImplementation, {
+  const res = await transformAsync(impl, {
     ast: true,
     parserOpts: { plugins: ['typescript', 'jsx'] },
     babelrc: false,
   }).catch(e => null)
-  if (!res) {
+  if (!res || !res.ast) {
     return
   }
 
@@ -40,8 +39,7 @@ export const analysisAdapters = async (filename: string) => {
 
   const importSources: { [props: string]: string } = {}
 
-  // viewAst(ast!)
-  traverse(ast!, {
+  traverse(ast, {
     ImportDeclaration: (nodePath: NodePath) => {
       const source = (nodePath.get('source.value') as any).node
       const specs = nodePath.get('specifiers') as any[]
@@ -57,47 +55,38 @@ export const analysisAdapters = async (filename: string) => {
       }
       const typeParams = getNodePathArray(nodePath, typeParamsPath)
 
-      const outputPort: string = (typeParams[0].get('typeName') as any).node
-        .name
-      const inputPorts: Manifest['inputPorts'] = {}
+      const name = getNodePath(typeParams[0], 'typeName')!.node.name
+      const requirePorts: Manifest['requirePorts'] = {}
 
       if (typeParams.length >= 2) {
-        const ip = typeParams[1].get('members') as NodePath[]
+        const ip = getNodePathArray(typeParams[1], 'members')
         ip.forEach(member => {
           const key = (member.get('key.name') as any).node
-          inputPorts[key] = (member.get(
+          requirePorts[key] = (member.get(
             'typeAnnotation.typeAnnotation.typeName.name',
           ) as any).node
         })
       }
 
       manifests.push({
-        inputPorts,
-        outputPort,
-        codeImplementation,
-        codePortsInterface: '',
+        requirePorts,
+        name,
+        impl,
+        portsDef: '',
       })
-
-      // const outputPort = tp.node
-      // const name = nodePath.get('id.name') as NodePath
-
-      // const otuputPotrs =
     },
   })
   await Promise.all(
     manifests.map(async manifest => {
-      const fn = importSources[manifest.outputPort]
+      const fn = importSources[manifest.name]
       const portInterfacePath = path.resolve(
         path.dirname(filename),
         path.dirname(fn),
         path.basename(fn),
       )
-      manifest.codePortsInterface = await readFile(
-        require.resolve(portInterfacePath),
-        {
-          encoding: 'utf-8',
-        },
-      )
+      manifest.portsDef = await readFile(require.resolve(portInterfacePath), {
+        encoding: 'utf-8',
+      })
     }),
   )
 

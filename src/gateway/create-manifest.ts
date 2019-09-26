@@ -1,11 +1,11 @@
 import path from 'path'
 
-import glob from 'glob'
+import globby from 'globby'
 
 import { analysisAdapters } from './analysis-adapters'
 
-export const createManifest = async (adaptersDir: string) => {
-  const files = glob.sync(`${adaptersDir}/**/*`)
+export const createManifest = async (dir: string) => {
+  const files = await globby([`${dir}/**/*`, '!node_modules'])
   const manifests = (await Promise.all(
     files
       .map(filename => path.resolve(filename))

@@ -1,8 +1,9 @@
-// @ts-ignore
-import { bootstrap } from 'gateway'
+//@ts-ignore
+import { bootstrap } from '@noxt/gateway'
+import { FileTodoPort } from '../file-todos/ports'
 
 const run = async () => {
-  const { find } = await bootstrap('FileTodoPort', {
+  const { find } = await bootstrap<FileTodoPort>('FileTodoPort', {
     FileTodoPort: {
       filename: 'examples/todo.md',
     },

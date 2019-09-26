@@ -6,19 +6,16 @@ export default () => ({read: (filename) => '* [ ] ' + filename})
 `
 
 const fileManifest: Manifest = {
-  inputPorts: {},
-  outputPort: 'FilesPort',
-  codeImplementation: filesImpl,
-  codePortsInterface: '',
+  requirePorts: {},
+  name: 'FilesPort',
+  impl: filesImpl,
+  portsDef: '',
 }
 
 const fileTodoImpl = `
 const createFileTodos = (ports, { filename }) => {
   const find = async searchPatterns => {
-    console.log(ports)
-    const results = ports.FilesPort.read(filename)
-    console.log(results)
-    return results
+    return ports.files.read(filename)
   }
   return { find }
 }
@@ -27,18 +24,18 @@ export default createFileTodos
 `
 
 const fileTodoManifest: Manifest = {
-  inputPorts: { files: 'FilesPort' },
-  outputPort: 'FileTodoPort',
-  codeImplementation: fileTodoImpl,
-  codePortsInterface: '',
+  requirePorts: { files: 'FilesPort' },
+  name: 'FileTodoPort',
+  impl: fileTodoImpl,
+  portsDef: '',
 }
 
-test('', async () => {
+test('loadModule', async () => {
   const manifests: Manifest[] = [fileManifest, fileTodoManifest]
 
   const result = await loadModule(
     'FileTodoPort',
-    { config: { FileTodoPort: { filename: 'hoge.md' } } },
+    { FileTodoPort: { filename: 'hoge.md' } },
     manifests,
   )
   expect(await result.find()).toEqual('* [ ] hoge.md')

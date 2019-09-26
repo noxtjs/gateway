@@ -1,6 +1,6 @@
 export interface Manifest {
-  inputPorts: { [props: string]: string }
-  outputPort: string
-  codeImplementation: string // unknown にしたい
-  codePortsInterface: string
+  requirePorts: { [props: string]: string }
+  name: string
+  impl: string // unknown にしたい
+  portsDef: string
 }

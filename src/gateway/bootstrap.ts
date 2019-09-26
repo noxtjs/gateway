@@ -1,9 +1,12 @@
 import { loadModule } from './load-module'
-import { Manifest } from './manifest'
 import { createManifest } from './create-manifest'
 
-export const bootstrap = async (name: string, conf: any = {}) => {
-  const manifests = await createManifest('./examples')
+export const bootstrap = async <T>(
+  moduleName: string,
+  basepath: string,
+  conf: any = {},
+): Promise<T> => {
+  const manifests = await createManifest(basepath)
 
-  return await loadModule(name, conf, manifests)
+  return loadModule<T>(moduleName, conf, manifests)
 }

@@ -2,6 +2,5 @@
 
 require('source-map-support').install()
 
-console.log('bin')
 const { cli } = require('../dist/cli')
 cli()

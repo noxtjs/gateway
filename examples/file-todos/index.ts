@@ -1,5 +1,5 @@
 // @ts-ignore
-import { GatewayFactory } from 'gateway'
+import { GatewayFactory } from '@noxt/gateway'
 
 import { FilesPort } from '../files/ports'
 import { FileTodoPort } from './ports'

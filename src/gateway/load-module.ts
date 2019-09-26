@@ -10,15 +10,15 @@ export const loadModule = async <T = any>(
   manifests: Manifest[],
 ) => {
   console.log('loadModule', name, confs)
-  const manifest = manifests.find(m => m.outputPort === name)
+  const manifest = manifests.find(m => m.name === name)
   if (!manifest) {
     throw new Error(`not found ${name} Module`)
   }
 
   const ports: { [props: string]: any } = {}
   Promise.all(
-    Object.keys(manifest.inputPorts).map(async key => {
-      const n = manifest.inputPorts[key]
+    Object.keys(manifest.requirePorts).map(async key => {
+      const n = manifest.requirePorts[key]
       if (!(n in cache)) {
         cache[n] = await loadModule(n, confs, manifests)
       }
@@ -26,12 +26,9 @@ export const loadModule = async <T = any>(
     }),
   )
 
-  console.log('createModule', manifest.outputPort)
+  console.log('createModule', manifest.name)
   try {
-    const module = compile(
-      manifest.codeImplementation as string,
-      `${manifest.outputPort}.ts`,
-    )
+    const module = compile(manifest.impl as string, `${manifest.name}.ts`)
     const factory = 'default' in module ? module.default : module
 
     const conf = name in confs ? confs[name] : {}
@@ -41,5 +38,6 @@ export const loadModule = async <T = any>(
     console.log('------')
     console.error(e)
     console.log('------')
+    throw e
   }
 }

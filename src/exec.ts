@@ -1,15 +1,17 @@
 import path from 'path'
 
 import { bootstrap } from './gateway/bootstrap'
-import { loadModule } from './gateway/load-module'
 import { hackExt, hackLoader, originalExts } from './require-hack'
 import { transpile } from './transpile'
 
-export const execWithGateway = async (entrypoint: string) => {
-  hackLoader((name, parent, isMain) => {
-    if (name === 'gateway') {
-      console.log('load hack gateway!')
-      return { bootstrap, loadModule, hoge: 'hoge' }
+export const execWithGateway = async (entrypoint: string, basePath: string) => {
+  hackLoader(name => {
+    if (name === '@noxt/gateway') {
+      return {
+        bootstrap: (name: string, conf: any) => {
+          return bootstrap(name, basePath, conf)
+        },
+      }
     }
   })
 
