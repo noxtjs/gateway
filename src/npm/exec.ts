@@ -1,65 +1,73 @@
 import path from 'path'
 
 import { fetchPkg } from './fetch-pkg'
-import { hackLoader, builtinModules, Module } from '../require-hack'
+import { hackLoader, builtinModules, Module } from '../module-hack'
+import { compile } from '../transpile'
 
 const exec = async () => {
   const pkgs = await fetchPkg('uuidv4')
-  const pkgnames = Object.keys(pkgs)
-  console.log(Object.keys(pkgs['uuid'].data))
 
-  const requireStack: string[] = []
+  const requireStack: [string, string][] = []
 
   hackLoader((name, parent, isMain) => {
     let [modname, modpath] = name.split('/', 2)
-    console.log('load', name, modname, modpath)
     if (builtinModules.includes(modname)) {
       return
     }
 
+    console.log('load', name, modname, modpath)
+
+    const isRelative = name.startsWith('.') || name.startsWith('/')
     if (requireStack.length === 0) {
-      if (name.startsWith('.') || name.startsWith('/')) {
+      if (isRelative) {
         return
       }
     }
 
-    if (name.startsWith('.') || name.startsWith('/')) {
-      console.log('prev', requireStack[requireStack.length - 1])
-      ;[modname, modpath] = requireStack[requireStack.length - 1].split('/', 2)
-      modpath = path.join(path.dirname(modpath), name)
+    if (isRelative) {
+      const prev = requireStack[requireStack.length - 1]
+      console.log('prev', prev)
+      modname = prev[0]
+      modpath = path.join(path.dirname(prev[1]), name)
     }
 
     console.log('  hack:', modname, modpath)
-    requireStack.push(`${modname}/${modpath}`)
 
-    let filename: string = `package/${pkgs[modname].info.main}`
+    let filename: string = pkgs[modname].info.main
     if (modpath) {
-      filename = `package/${modpath}`
+      filename = modpath
     }
 
     const exts = ['.js', '.json', '.node']
     if (!exts.find(ext => filename.endsWith(ext))) {
       const files = Object.keys(pkgs[modname].data).filter(n =>
         exts.find(
-          ext =>
-            n === `${filename}${ext}` ||
-            exts.find(ext => n === `${filename}/index${ext}`),
+          ext => n === `${filename}${ext}` || n === `${filename}/index${ext}`,
         ),
       )
       console.log(files)
       filename = files[0]
     }
 
+    if (!filename) {
+      console.log('------------------------')
+      console.log(modpath)
+      console.log(Object.keys(pkgs[modname].data))
+      console.log('------------------------')
+    }
+    requireStack.push([modname, filename])
+    console.log('PUSH', [modname, filename])
+
     const code = pkgs[modname].data[filename].toString()
     const module = new Module()
-    module.parent = parent
-    const res = module._compile(code, filename)
+    module._compile(code, filename)
     requireStack.pop()
-    console.log('R', requireStack.length)
-    return res || null
+    console.log('R', requireStack.length, name, module.exports)
+    return module.exports || null
   })
 
-  require('uuidv4')
+  const uuidv4 = require('uuidv4').default
+  console.log(uuidv4())
 
   // Object.keys(pkgs).map(name => {
   //   console.log(name)

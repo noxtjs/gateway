@@ -1,7 +1,7 @@
 import path from 'path'
 
 import { bootstrap } from './gateway/bootstrap'
-import { hackExt, hackLoader, originalExts } from './require-hack'
+import { hackExt, hackLoader, originalExts } from './module-hack'
 import { transpile } from './transpile'
 
 export const execWithGateway = async (entrypoint: string, basePath: string) => {

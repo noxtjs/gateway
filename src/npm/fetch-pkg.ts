@@ -16,7 +16,8 @@ const extractTar = (tarball: NodeJS.ReadableStream) => {
       .on('error', err => reject(err))
       .on('finish', () => resolve(files))
       .on('entry', (headers, stream, next) => {
-        const { name } = headers
+        let { name } = headers
+        name = name.replace(/^package\//, '')
         if (!(name in files)) {
           files[name] = ''
         }
