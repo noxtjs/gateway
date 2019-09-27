@@ -3,4 +3,5 @@ export interface Manifest {
   name: string
   impl: string // unknown にしたい
   portsDef: string
+  importPackages: string[]
 }

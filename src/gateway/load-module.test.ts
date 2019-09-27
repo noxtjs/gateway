@@ -10,6 +10,7 @@ const fileManifest: Manifest = {
   name: 'FilesPort',
   impl: filesImpl,
   portsDef: '',
+  importPackages: [],
 }
 
 const fileTodoImpl = `
@@ -28,6 +29,7 @@ const fileTodoManifest: Manifest = {
   name: 'FileTodoPort',
   impl: fileTodoImpl,
   portsDef: '',
+  importPackages: [],
 }
 
 test('loadModule', async () => {

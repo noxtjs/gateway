@@ -1,6 +1,5 @@
 import path from 'path'
 
-import { fetchPkg } from './fetch-pkg'
 import { hackLoader, builtinModules, Module } from '../module-hack'
 
 const resolveRelative = (requireStack: [string, string][], name: string) => {
@@ -36,11 +35,14 @@ const resolveFile = (pkg: any, modpath: string) => {
 export const hackZeroinstall = (pkgs: any) => {
   const requireStack: [string, string][] = []
 
+  const pkgNames = Object.keys(pkgs)
+  if (pkgNames.length === 0) {
+    return
+  }
+  console.log(`hackZeroinstall ${pkgNames}`)
+
   hackLoader((name, parent, isMain) => {
     let [modname, modpath] = name.split('/', 2)
-    if (builtinModules.includes(modname)) {
-      return
-    }
 
     const isRelative = name.startsWith('.') || name.startsWith('/')
     if (requireStack.length === 0 && isRelative) {
@@ -51,6 +53,9 @@ export const hackZeroinstall = (pkgs: any) => {
       ;[modname, modpath] = resolveRelative(requireStack, name)
     }
 
+    if (!pkgNames.includes(modname)) {
+      return
+    }
     console.log('load hack:', name, modname, modpath)
 
     const filename = resolveFile(pkgs[modname], modpath)
@@ -66,14 +71,3 @@ export const hackZeroinstall = (pkgs: any) => {
     return module.exports || null
   })
 }
-
-const exec = async () => {
-  const pkgs = await fetchPkg('uuidv4')
-
-  hackZeroinstall(pkgs)
-
-  const uuidv4 = require('uuidv4').default
-  console.log(uuidv4())
-}
-
-exec()

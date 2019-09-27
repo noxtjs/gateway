@@ -14,7 +14,7 @@ export const hackExt = (ext: string, hook: Hook) => {
   }
 }
 
-export const { builtinModules } = Module
+export const builtinModules: string[] = Module.builtinModules
 
 type Loader = (name: string, parent: any, isMain: boolean) => any
 

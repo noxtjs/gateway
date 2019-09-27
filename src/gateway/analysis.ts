@@ -7,13 +7,14 @@ import { NodePath } from '@babel/traverse'
 
 import { Manifest } from './manifest'
 import { getNodePath, getNodePathArray } from './babel/utils'
+import { builtinModules } from '../module-hack'
 
 const readFile = promisify(fs.readFile)
 
 const gatewayPath = 'id.typeAnnotation.typeAnnotation.typeName.name'
 const typeParamsPath = 'id.typeAnnotation.typeAnnotation.typeParameters.params'
 
-export const analysisAdapters = async (filename: string) => {
+export const analysis = async (filename: string) => {
   const manifests: Manifest[] = []
   const impl = await readFile(filename, {
     encoding: 'utf-8',
@@ -38,11 +39,26 @@ export const analysisAdapters = async (filename: string) => {
   const { ast } = res
 
   const importSources: { [props: string]: string } = {}
+  const importPackages: string[] = []
 
+  const rePackage = /^(@[^/]+\/)?([^/]+)$/
   traverse(ast, {
     ImportDeclaration: (nodePath: NodePath) => {
-      const source = (nodePath.get('source.value') as any).node
-      const specs = nodePath.get('specifiers') as any[]
+      const sourceNodePath = getNodePath(nodePath, 'source.value')
+      if (!sourceNodePath) {
+        return
+      }
+      const source = sourceNodePath.node
+
+      const matched = rePackage.exec(source)
+      if (
+        matched &&
+        source !== '@noxt/gateway' &&
+        !builtinModules.includes(source)
+      ) {
+        importPackages.push(source)
+      }
+      const specs = getNodePathArray(nodePath, 'specifiers')
       specs.forEach((spec: any) => {
         importSources[spec.get('local.name').node] = source
       })
@@ -73,6 +89,7 @@ export const analysisAdapters = async (filename: string) => {
         name,
         impl,
         portsDef: '',
+        importPackages,
       })
     },
   })

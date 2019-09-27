@@ -18,6 +18,18 @@ $ gateway exec hoge.ts
 
 最低限のファイルだけ用意
 
+## gateway watch
+
+----
+
+## zero install
+
+まだまだ不完全とは思うがzero installの仕組みはできた。
+
+ただし、package.jsonが既にあるなら（あるいはオプションによって）、zero install しないようにするべきか
+
+
+
 ----
 
 package.json その他がない状態で、VSCodeをだますことは出来るか？
@@ -47,12 +59,3 @@ jsconfig.json でパッケージエイリアスは張れる
   - babelやbundlerを別途入れる必要はない
   - jest を別途入れる必要はない
   - それらの設定は不要
-
-## ゼロセットアップとかの方向性
-
-Module hackはできるから、module を require したら、オンメモリなりキャッシュなり、
-あるいは他なり、何かしらをアプリに渡すことはできるので、ゼロセットアップは多分可能
-
-## npm zero install
-
-とりあえず、`uuidv4` パッケージの実行には成功。ネイティブモジュールとか、package.jsonに面倒なタスク登録されたパッケージはたぶん動かないとは思うが。
