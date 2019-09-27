@@ -10,11 +10,7 @@
     "jsx": "preserve",
     "outDir": "dist",
     "declaration": true,
-    "sourceMap": true,
-    "baseUrl": "./src",
-    "paths": {
-      "@noxt/gateway": ["gateway"]
-    }
+    "sourceMap": true
   },
   "include": ["src", "decls.d.ts"],
   "exclude": ["node_modules"]

@@ -7,7 +7,7 @@ const usage = () => {
     'Usage: gateway <subcommand> [...options]',
     '',
     'sub commands:',
-    '  exec: [--dir] <execution module name>',
+    '  exec: <execution module name>',
     '  serve:',
   ]
 
@@ -18,15 +18,13 @@ const usage = () => {
 
 const exec = async () => {
   const args = arg(
-    {
-      '--dir': String,
-    },
+    {},
     {
       argv: process.argv.slice(3),
     },
   )
   const entrypoint = args._[0]
-  await execWithGateway(entrypoint, args['--dir'] || '.')
+  await execWithGateway(entrypoint)
 }
 
 const subcommands: { [props: string]: Function } = {

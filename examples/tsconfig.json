@@ -1,0 +1,10 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "..",
+    "paths": {
+      "@noxt/gateway": ["src/gateway"]
+    }
+  },
+  "include": ["."]
+}

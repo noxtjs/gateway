@@ -3,7 +3,6 @@ import { promisify } from 'util'
 
 const readFile = promisify(fs.readFile)
 
-//@ts-ignore
 import { GatewayFactory } from '@noxt/gateway'
 
 import { FilesPort } from './ports'

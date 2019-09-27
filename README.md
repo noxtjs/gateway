@@ -18,11 +18,36 @@ ports and adapters デザインパターンを支援するのが目的です。
 ```sh
 $ yarn
 $ yarn build
-$ bin/gateway exec --dir examples examples/app/index.ts
+$ bin/gateway exec examples/app/index.ts
 ```
 
-`--dir`オプションで指定したディレクトリか、カレント以下（ただしnode_modulesは無視する）にある
-TypeScript のソースコードをスキャンして、GatewayFactory 型の関数定義とジェネリクスの型指定をもとに、
+```ts {filename=examples/app/index.ts}
+import path from 'path'
+
+import { bootstrap } from '@noxt/gateway'
+
+import { FileTodoPort } from '../file-todos/ports'
+
+const run = async () => {
+  const { find } = await bootstrap<FileTodoPort>(
+    'FileTodoPort',
+    path.join(__dirname, '..'),
+    {
+      FileTodoPort: {
+        filename: 'examples/todo.md',
+      },
+    },
+  )
+  const res = await find('hoge')
+  console.log(res)
+}
+
+run()
+```
+
+bootstrap関数の第2引数をパスとして、
+そのパス以下にある TypeScript のソースコードをスキャンして、
+存在する GatewayFactory 型の関数定義とジェネリクスの型指定をもとに、
 必要な初期データを与えてファクトリメソッドを実行します。
 
 ### ファクトリメソッドの定義

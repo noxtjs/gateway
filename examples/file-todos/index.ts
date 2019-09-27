@@ -1,4 +1,3 @@
-// @ts-ignore
 import { GatewayFactory } from '@noxt/gateway'
 
 import { FilesPort } from '../files/ports'
@@ -10,7 +9,7 @@ const createFileTodos: GatewayFactory<
   { filename: string }
 > = (ports, { filename }) => {
   const find: FileTodoPort['find'] = async searchPattern => {
-    const lines: string[] = (await ports.files.read(filename)).split('\n')
+    const lines = (await ports.files.read(filename)).split('\n')
     return lines.filter(line => line.includes(searchPattern))
   }
   return { find }
