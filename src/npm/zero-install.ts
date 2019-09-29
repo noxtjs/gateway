@@ -41,7 +41,7 @@ export const hackZeroinstall = (pkgs: any) => {
   }
   console.log(`hackZeroinstall ${pkgNames}`)
 
-  hackLoader((name, parent, isMain) => {
+  const unhack = hackLoader((name, parent, isMain) => {
     let [modname, modpath] = name.split('/', 2)
 
     const isRelative = name.startsWith('.') || name.startsWith('/')
@@ -70,4 +70,5 @@ export const hackZeroinstall = (pkgs: any) => {
     console.log('R', requireStack.length, name, module.exports)
     return module.exports || null
   })
+  return unhack
 }

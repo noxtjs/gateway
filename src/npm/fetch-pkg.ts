@@ -32,7 +32,7 @@ export const fetchPkg = async (name: string, version?: string) => {
   const url = `https://registry.yarnpkg.com/${name}`
   const json = await fetch(url).then(res => res.json())
 
-  let caches: { [props: string]: { info: any; data: any } } = {}
+  let pkgs: { [props: string]: { info: any; data: any } } = {}
 
   if (!version) {
     const { latest } = json['dist-tags']
@@ -43,8 +43,8 @@ export const fetchPkg = async (name: string, version?: string) => {
   if (info.dependencies) {
     await Promise.all(
       Object.keys(info.dependencies).map(async name => {
-        caches = {
-          ...caches,
+        pkgs = {
+          ...pkgs,
           ...(await fetchPkg(name, info.dependencies[name])),
         }
       }),
@@ -53,7 +53,7 @@ export const fetchPkg = async (name: string, version?: string) => {
 
   const tarball = await fetch(info.dist.tarball).then(res => res.body)
   const data = await extractTar(tarball)
-  caches[name] = { info, data }
+  pkgs[name] = { info, data }
 
-  return caches
+  return pkgs
 }

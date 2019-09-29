@@ -1,9 +1,0 @@
-{
-  "name": "npm-analysis",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "dependencies": {
-    "uuidv4": "^5.0.1"
-  }
-}
