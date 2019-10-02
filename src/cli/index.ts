@@ -27,8 +27,14 @@ const exec = async () => {
   await execWithGateway(entrypoint)
 }
 
+const test = async () => {
+  const jest = await import('jest')
+  await jest.run()
+}
+
 const subcommands: { [props: string]: Function } = {
   exec,
+  test,
 }
 
 export const cli = () => {

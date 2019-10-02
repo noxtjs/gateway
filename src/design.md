@@ -3,6 +3,7 @@ zero install や zero package.json を目指したい
 ```sh
 $ gateway test .
 $ gateway register .
+$ gateway archive .
 $ gateway exec hoge.ts
 ```
 
@@ -13,6 +14,12 @@ $ gateway exec hoge.ts
 ## gateway register
 
 指定したディレクトリにあるportsやGatewayFactoryを manifests.json に登録
+
+## geteway archive
+
+指定したディレクトリにあるあれこれをarchiveに登録
+
+（削除とかは別途自前で行う）
 
 ## gateway init
 
@@ -32,20 +39,26 @@ $ gateway exec hoge.ts
 
 ----
 
+## 型定義をだます方法
+
 package.json その他がない状態で、VSCodeをだますことは出来るか？
+問題は型定義。あとは動作時にhackでなんとかする。
 
-* tsconfig.jsonでいけそうな気がするんだけど…？
+### tsconfig.json
 
-* .vscode/ とか jsconfig.jsonとかがあればなんとかなる？？？
-* node_modules/ に最低限のものだけいれておく
+```json {filename="tsconfig.json"}
+"compilerOptions": {
+  "typeRoots" : ["./.gateway", "~/.gateway/"]
+}
+```
 
-1. 普通に package.json と node_modules を用意する
-2. .vscode/ とか jsconfig.json を用意してごまかす
-3. そういうのなしでVSCode をだます
+* 従来のやつをどうするか？ `["./node_modules/@types", "../node_modules/@types" ...]`
 
-jsconfig.json でパッケージエイリアスは張れる
+### node_modules...
 
-もっかい、やりたい事を考え直す
+* node_modules/@types/xxxx
+
+----
 
 * 「ゼロセットアップ or ワンストップセットアップ」で作った環境で実験
   - うまくいったらそれをregisterする
